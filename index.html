@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Kuru Temizleme Ümraniye ve Lostra Hizmeti | Dry Dutch Kuru Temizleme</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="drydutch.css">
+<meta name="description"
+content="Ümraniye Kuru temizleme, perde yıkama, koltuk yıkama ve lostra hizmetleri. Profesyonel temizlik, hızlı teslimat ve uygun fiyatlar.">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+<div id="dd-preloader">
+
+    <div class="dd-preloader-container">
+
+        <img src="images/kirliüstgif.webp" alt="ümraniye kuru temizleme " class="dd-element" id="dd-kirli-tisort">
+
+        <img src="images/incele.webp" alt="ümraniye kuru temizleme " class="dd-element" id="dd-buyutec">
+        <img src="images/ilaç.webp" alt="ümraniye kuru temizleme " class="dd-element" id="dd-ilac">
+        <img src="images/makine.webp" alt="ümraniye kuru temizleme " class="dd-element" id="dd-makine">
+
+        <img src="images/temizüst_result.webp" alt="ümraniye kuru temizleme " class="dd-element" id="dd-temiz-tisort">
+
+        <img src="images/üyü.webp" alt="ümraniye kuru temizleme " class="dd-element" id="dd-utu">
+        <img src="images/paket.webp" alt="ümraniye kuru temizleme " class="dd-element" id="dd-paket">
+
+    </div>
+
+    <div class="dd-brand-loading">
+
+        <img src="images/logo.webp" alt="ümraniye koltuk yıkama - kuru temizleme " class="dd-brand-logo">
+
+        <div class="dd-loading-text">
+            Dry Dutch Yükleniyor<span></span>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="luxury-nav">
+
+    <a href="" class="brand-logo">
+
+        <img src="images/logo.webp" class="logo-img" alt="ümraniye halı yıkama  ">
+
+        <span class="logo-text">Dry Dutch</span>
+
+    </a>
+
+
+
+    <div class="nav-menu" id="navMenu">
+
+        <a href="drydutch.html" class="menu-link">Ana sayfa</a>
+
+        <a href="hakkında.html" class="menu-link">Hakkında</a>
+        <a href="iletisim.html" class="menu-link">İletişim</a>
+
+    </div>
+
+
+
+    <div class="nav-actions">
+
+        <div class="nav-profile" id="cart-target" onclick="openCartSidebar()">
+
+            <p class="nav-profile-name"></p>
+
+            <div class="nav-profile-cart">
+
+                <i class="fas fa-cart-shopping"></i>
+
+                <div class="cartcount" id="cart-count">0</div>
+
+            </div>
+
+        </div>
+
+
+
+        <button class="luxury-hamburger" onclick="toggleMenu()">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </button>
+
+    </div>
+
+</nav>
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-content">
+            <span class="hero-subtitle">Premium Kuru Temizleme & Kapıda Teslimat</span>
+            <h1 class="hero-title">Giysileriniz İlk Günkü Gibi Kusursuz</h1>
+            <p class="hero-description">
+                Zamanınız size kalsın. Profesyonel kuru temizleme, ütüleme ve ayakkabı bakımı hizmetlerimizle kapınıza kadar geliyoruz.
+            </p>
+           
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+
+        <h3>Sepetim</h3>
+
+        <button class="close-sidebar-btn" onclick="closeCartSidebar()">✖</button>
+
+    </div>
+
+
+
+    <div id="sidebar-cart-list-container" class="cart-items-wrapper"></div>
+
+
+
+    <div class="cart-footer">
+
+        <div id="cart-total-price">Toplam: 0 TL</div>
+
+        <button class="btn btn-buy" onclick="sendToWhatsApp()">Adresine özel teklif al</button>
+
+    </div>
+
+</div>
+
+
+
+<div div class="product-container-wrapper">
+<div class="sidebar">
+    <input
+      type="text"
+      class="sidebar-search"
+      id="search-input"
+      placeholder="Hizmet ara..."
+      oninput="searchProducts()"
+    />
+
+    <a href="#" class="sidebar-items" onclick="changeCategory('KuruTemizleme', this, event)">
+      Kuru Temizleme
+    </a>
+
+    <a href="#" class="sidebar-items" onclick="changeCategory('gelinlik', this, event)">
+      Gelinlik
+    </a>
+
+    <a href="#" class="sidebar-items" onclick="changeCategory('takim', this, event)">
+      Takım Elbise
+    </a>
+
+    <a href="#" class="sidebar-items" onclick="changeCategory('lostra', this, event)">
+      Lostra (Ayakkabı)
+    </a>
+
+    <a href="#" class="sidebar-items" onclick="changeCategory('ev', this, event)">
+      Ev Bakım
+    </a>
+
+    <a href="#" class="sidebar-items" onclick="changeCategory('halı', this, event)">
+      Halı Yıkama
+    </a>
+
+    <a href="#" class="sidebar-items" onclick="changeCategory('çanta', this, event)">
+      Çanta
+    </a>
+
+    <a href="#" class="sidebar-items" onclick="changeCategory('ütü', this, event)">
+      Ütü
+    </a>
+
+    <a href="#" class="sidebar-items" onclick="changeCategory('perde', this, event)">
+      Perde
+    </a>
+</div>
+
+  <div class="product" id="product-container"></div>
+</div>
+
+
+
+
+
+
+
+
+
+<body>
+
+<div class="background"></div>
+
+<header class="header">
+    <h1>🧼Ümraniye Kuru Temizleme Hizmetleri</h1>
+    <p>Profesyonel bakım • Hijyenik temizlik • Kapıdan kapıya teslimat</p>
+</header>
+
+<section class="container">
+
+    <div class="card">
+        <h2>✨ Neden Kuru Temizleme?</h2>
+        <p>
+            Kuru temizleme, su kullanılmadan özel solventlerle yapılan profesyonel bir temizlik yöntemidir.  
+            Özellikle hassas kumaşlar, takım elbiseler, gelinlikler ve yünlü ürünler için idealdir.
+        </p>
+        <p>
+            🔹 Kumaşın formunu korur<br>
+            🔹 Renk solmasını engeller<br>
+            🔹 Derin leke çıkarma sağlar<br>
+            🔹 Profesyonel bakım sunar
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>⏱️ Zaman Kazandırır</h2>
+        <p>
+            Günlük hayatın yoğun temposunda çamaşır yıkama, kurutma ve ütüleme büyük zaman kaybıdır.  
+            Kuru temizleme hizmeti ile tüm bu süreç profesyonellere bırakılır.
+        </p>
+        <p>
+            ✔️ Yıkama yok<br>
+            ✔️ Kurutma derdi yok<br>
+            ✔️ Ütü hazır teslim<br>
+            ✔️ Zamandan maksimum tasarruf
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🚚 Kapıdan Kapıya Servis</h2>
+        <p>
+            Evinizden veya iş yerinizden kıyafetlerinizi alıyoruz, temizleyip ütüleyip tekrar teslim ediyoruz.
+        </p>
+        <p>
+            📍 Ücretsiz teslim alma<br>
+            📦 Hijyenik paketleme<br>
+            🏠 Kapıya teslim<br>
+            📲 WhatsApp ile kolay sipariş
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🧪 Kullanılan Kimyasallar & Sağlık</h2>
+        <p>
+            Kullanılan solventler Avrupa standartlarına uygun, kontrollü ve profesyonel temizlik sıvılarıdır.
+        </p>
+        <p>
+            🧴 CFC içermeyen çözücüler<br>
+            🌿 Hassas cilt dostu işlem<br>
+            🧼 Koku bırakmayan temizlik<br>
+            🛡️ Hijyen sertifikalı süreç
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>👔 Hangi Ürünler Temizlenir?</h2>
+        <p>
+            Aşağıdaki ürünler profesyonel şekilde temizlenmektedir:
+        </p>
+        <p>
+            👕 Gömlek & Tişört<br>
+            🧥 Mont & Kaban<br>
+            👗 Elbise & Gelinlik<br>
+            👖 Pantolon & Takım Elbise<br>
+            🧣 Yünlü ve hassas kumaşlar
+        </p>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>Dry Dutch Kuru Temizleme</h3>
+            <p>
+                Dry Dutch olarak profesyonel kuru temizleme, ütüleme ve tekstil bakım
+                hizmetleri sunuyoruz. Modern ekipmanlarımız ve kaliteli temizlik
+                çözümlerimiz sayesinde kıyafetlerinizi ilk günkü görünümüne
+                kavuşturuyor, zamandan tasarruf etmenizi sağlıyoruz.
+            </p>
+        </div>
+
+       <div class="footer-col">
+    <h3>Bize Ulaşın</h3>
+
+    <div class="footer-item">
+        📞
+        <a href="https://wa.me/905384707712"
+           target="_blank"
+           class="footer-link">
+            0538 470 77 12
+        </a>
+    </div>
+
+    <div class="footer-item">
+        📍
+        <a href="https://www.google.com/maps/place/Dry+dutch+kurutemizleme/@41.0165414,29.0859322,851m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14cac8915360157d:0x68613bce18296a0!8m2!3d41.0165375!4d29.0908031!16s%2Fg%2F11c6s6ltk1?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D"
+           target="_blank"
+           class="footer-link">
+            Esenevler, Yunus Emre Cd. 7/A, 34762 Ümraniye / İstanbul
+        </a>
+    </div>
+</div>
+        <div class="footer-col">
+            <h3>Hizmet Bölgeleri</h3>
+
+            <ul>
+                <li>Ümraniye</li>
+                <li>Üsküdar</li>
+                <li>Ataşehir</li>
+                <li>Beykoz</li>
+                <li>Ömerli</li>
+                <li>Çekmeköy</li>
+                <li>Sancaktepe</li>
+                <li>Kadıköy</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Dry Dutch Kuru Temizleme - Tüm Hakları Saklıdır.
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+<script src="drydutch.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ümraniye Kuru Temizleme Dry Dutch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
+
+    <style>
+        /* RESET & GENEL */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { height: 100vh; overflow-x: hidden; font-family: "Roboto Condensed", sans-serif; }
+
+        /* NAVBAR */
+        .luxury-nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 80px; padding: 0 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(20px); z-index: 1000;
+        }
+        .brand-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-img { height: 60px; border-radius: 50%; }
+        .logo-text { color: white; font-size: 18px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+
+        .nav-menu { display: flex; gap: 30px; }
+        .menu-link { color: rgba(255, 255, 255, 0.7); text-decoration: none; text-transform: uppercase; font-size: 14px; transition: 0.3s; }
+        .menu-link:hover { color: white; }
+
+        .luxury-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 10px; }
+        .luxury-hamburger span { width: 25px; height: 3px; background: white; transition: 0.3s; }
+
+        /* BACKGROUND */
+        .tdm-bg-container {
+            width: 100%; min-height: 100vh; display: flex; justify-content: center; align-items: center;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%; animation: bg 15s ease infinite;
+        }
+        @keyframes bg { 0% {background-position:0% 50%;} 50% {background-position:100% 50%;} 100% {background-position:0% 50%;} }
+
+        /* MENU LIST */
+        .tdm-menu-list { display: flex; gap: 65px; padding: 60px; list-style: none; }
+        .tdm-menu-link {
+            position: relative; display: flex; align-items: center; width: 290px; height: 100px;
+            background: #fff; padding-left: 25px; text-decoration: none;
+            transform: rotate(-30deg) skew(25deg); box-shadow: -25px 25px 20px rgba(0,0,0,.22);
+            transition: .4s; border-radius: 8px; color: #333;
+        }
+
+        /* HOVER RENKLERİ GERİ GELDİ */
+        .tdm-menu-item:nth-child(1) .tdm-menu-link:hover { background: #25D366; color: #fff; }
+        .tdm-menu-item:nth-child(2) .tdm-menu-link:hover { background: #e1306c; color: #fff; }
+        .tdm-menu-item:nth-child(3) .tdm-menu-link:hover { background: #007bb5; color: #fff; }
+        .tdm-menu-item:nth-child(4) .tdm-menu-link:hover { background: #ea4335; color: #fff; }
+
+        .tdm-menu-link:hover { transform: rotate(-30deg) skew(25deg) translate(25px,-20px); }
+        .tdm-content-box { display: flex; align-items: center; gap: 15px; }
+        .tdm-logo { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .tdm-content-box i { font-size: 36px; }
+        .tdm-content-box span { font-size: 18px; font-weight: 700; }
+
+        /* 3D EFEKT */
+        .tdm-menu-link:before { content:''; position:absolute; top:14px; left:-28px; width:28px; height:100%; background:#dcdcdc; transform:skewY(-45deg); }
+        .tdm-menu-link:after { content:''; position:absolute; bottom:-28px; left:-14px; width:100%; height:28px; background:#b1b1b1; transform:skewX(-45deg); }
+
+        /* MOBİL DÜZENLEMELER */
+        @media(max-width: 992px) {
+            .tdm-menu-list { flex-direction: column; gap: 50px; }
+            .tdm-menu-link { width: 210px; height: 75px; }
+        }
+        @media (max-width: 768px) {
+            .luxury-hamburger { display: flex; }
+            .nav-menu {
+                position: fixed; top: 80px; right: -100%; width: 100%; height: calc(100vh - 80px);
+                background: rgba(10, 10, 10, 0.98); flex-direction: column; align-items: center;
+                justify-content: center; gap: 30px; transition: 0.4s;
+            }
+            .nav-menu.active { right: 0; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="luxury-nav">
+        <a href="#" class="brand-logo">
+            <img src="images/logo.webp" class="logo-img" alt="Ümraniye kuru temizleme">
+            <span class="logo-text">Dry Dutch</span>
+        </a>
+       
+
+    <div class="nav-menu" id="navMenu">
+
+        <a href="drydutch.html" class="menu-link">Ana sayfa</a>
+
+        <a href="hakkında.html" class="menu-link">Hakkında</a>
+        <a href="iletisim.html" class="menu-link">İletişim</a>
+
+    </div>
+        <button class="luxury-hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+ <div class="tdm-bg-container">
+    <ul class="tdm-menu-list">
+        <li class="tdm-menu-item">
+            <a href="https://wa.me/905384707712" target="_blank" class="tdm-menu-link">
+                <div class="tdm-content-box">
+                    <img src="images/logo.webp" class="tdm-logo">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </div>
+            </a>
+        </li>
+        <li class="tdm-menu-item">
+            <a href="https://instagram.com/dry.dutch" target="_blank" class="tdm-menu-link">
+                <div class="tdm-content-box">
+                    <img src="images/logo.webp" class="tdm-logo">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@dry.dutch</span>
+                </div>
+            </a>
+        </li>
+        <li class="tdm-menu-item">
+            <a href="https://www.google.com/maps/place/Dry+dutch+kurutemizleme/@41.0165414,29.0859322,851m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14cac8915360157d:0x68613bce18296a0!8m2!3d41.0165375!4d29.0908031!16s%2Fg%2F11c6s6ltk1?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D" class="tdm-menu-link">
+                <div class="tdm-content-box">
+                    <img src="images/logo.webp" class="tdm-logo">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Konum</span>
+                </div>
+            </a>
+        </li>
+        <li class="tdm-menu-item">
+            <a href="tel:05384707712" class="tdm-menu-link">
+                <div class="tdm-content-box">
+                    <img src="images/logo.webp" class="tdm-logo">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Ara</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+    </script>
+    <script src="drydutch.js"></script>
+</body>
+</html>
