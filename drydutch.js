@@ -294,6 +294,7 @@ function closeCartSidebar() {
 
 
 
+
 function sendToWhatsApp() {
 
     if (Object.keys(cart).length === 0) {
@@ -322,11 +323,10 @@ function sendToWhatsApp() {
 
     const phone = "905384707712";
 
-    window.open(
-        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
-        "_blank"
-    );
+    window.location.href =
+        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
+
 
 
 
