@@ -145,7 +145,7 @@ function renderProducts(filterText = '') {
     return `
       <div class="product-items">
         <div>
-          <img class="product-img" src="${product.img}" alt="${product.name}">
+          <img class="product-img" src="${product.img}" alt="Ümraniye ${product.name} kuru temizleme hizmeti">
           <p class="product-title">${product.name}</p>
           <p class="product-price">${product.price} TL</p>
         </div>
