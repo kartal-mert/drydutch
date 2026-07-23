@@ -321,7 +321,7 @@ function sendToWhatsApp() {
 
     message += "\nFiyat bilgisi alabilir miyim?";
 
-    const phone = "905384707712";
+    const phone = "905321725404";
 
     window.location.href =
         `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
