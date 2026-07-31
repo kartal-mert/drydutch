@@ -255,7 +255,7 @@ function syncSidebarCart() {
     return `
       <div class="cartlist-items">
         <div class="cartlist-left">
-          <img src="${product.img}">
+          <img src="${product.img}" alt="Ümraniye ${product.name} kuru temizleme hizmeti">
           <div>
             <p>${product.name}</p>
             <p>${product.price} TL</p>
