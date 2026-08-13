@@ -466,7 +466,7 @@ body {
     aspect-ratio: 1376 / 768; 
     height: auto; /* Sabit yüksekliği kaldırıp orana bıraktık */
     
-    background: url('images/drydutchkurutemizleme.webp') no-repeat center center;
+    background: url('images/umraniye-drydutch-kuru-temizleme-magazasi.webp') no-repeat center center;
     background-size: contain; /* Fotoğrafın hiçbir yeri kırpılmaz, tam olarak görünür */
     background-color: #171b21; /* Fotoğrafın bittiği yerlerde (varsa) arka planın sırıtmaması için koyu renk */
     
@@ -578,7 +578,7 @@ body {
         /* DEĞİŞİKLİK: Görselin sağ tarafını kadraja almak için 'right center' olarak ayarladık */
         /* Ayrıca yazıların okunması için arkaya şık bir karartma gradient'i ekledik */
         background: linear-gradient(to right, rgba(23, 27, 33, 0.85) 30%, rgba(23, 27, 33, 0.3) 100%), 
-                    url('images/drydutchkurutemizleme.webp') no-repeat right center;
+                    url('images/umraniye-drydutch-kuru-temizleme-magazasi.webp') no-repeat right center;
         background-size: cover;
     }
     
@@ -772,7 +772,7 @@ body {
     background: linear-gradient(180deg, #244766 0%, #1b5a7c 100%);
     color: #fff;
     padding: 70px 5% 25px; /* Yüzdelik padding ile esneklik sağlandı */
-    margin-top: 80px;
+    margin-top: 0;
     width: 100%;
     box-sizing: border-box; /* Padding'in genişliği bozmasını engeller */
 }

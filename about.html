@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="drydutch.css">
     
     <style>
         /* 1. KURUMSAL RENK PALETİ VE DEĞİŞKENLER */
@@ -90,7 +91,7 @@
         .hero {
             position: relative;
             height: 100vh;
-            background: linear-gradient(rgba(17, 20, 76, 0.7), rgba(30, 61, 89, 0.75)), url('images/drydutch-dükkan.webp') no-repeat center center;
+            background: linear-gradient(rgba(17, 20, 76, 0.7), rgba(30, 61, 89, 0.75)), url('images/umraniye-kuru-temizleme-drydutch-dukkani.webp') no-repeat center center;
             background-size: cover;
             background-attachment: fixed; /* Parallax geçiş efekti */
             display: flex;
@@ -520,139 +521,24 @@
                 font-size: 2.2rem;
             }
         }
-
-        /* ======================
-            NAVBAR
-        ====================== */
-        .luxury-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            padding: 0 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            z-index: 1000;
-        }
-
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .logo-img {
-            height: 70px;
-            border-radius: 50%;
-        }
-
-        .logo-text {
-            color: white;
-            font-size: 16px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-        }
-
-        .menu-link {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        .menu-link:hover {
-            color: white;
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .nav-profile {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(255, 255, 255, 0.07);
-            padding: 8px 16px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-profile-name {
-            color: white;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        /* HAMBURGER */
-        .luxury-hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .luxury-hamburger span {
-            width: 22px;
-            height: 2px;
-            background: white;
-            transition: 0.3s;
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                right: -100%;
-                width: 70%;
-                height: calc(100vh - 80px);
-                background: rgba(10, 10, 10, 0.98);
-                flex-direction: column;
-                padding: 40px;
-                gap: 25px;
-                transition: 0.4s;
-            }
-            .nav-menu.active { right: 0; }
-            .luxury-hamburger { display: flex; }
-        }
     </style>
 </head>
 <body>
 
     <nav class="luxury-nav">
-        <a href="#" class="brand-logo">
-            <img src="images/logo.webp" class="logo-img" alt="Ümraniye kuru temizleme">
+        <a href="index.html" class="brand-logo">
+            <img src="images/umraniye-kuru-temizleme-drydutch-logo.webp" class="logo-img" alt="Ümraniye kuru temizleme">
             <span class="logo-text">Dry Dutch</span>
         </a>
 
         <div class="nav-menu" id="navMenu">
             <a href="index.html" class="menu-link">Ana sayfa</a>
             <a href="about.html" class="menu-link">Hakkında</a>
+            <a href="blog.html" class="menu-link">Blog</a>
             <a href="iletisim.html" class="menu-link">İletişim</a>
         </div>
 
         <div class="nav-actions">
-            <div class="nav-profile">
-                <p class="nav-profile-name"></p>
-            </div>
-
             <button class="luxury-hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -673,7 +559,7 @@
         <div class="container">
             <div class="grid-2">
                 <div class="side-image">
-                    <img src="images/karsilama.webp" alt="ümraniye Kuru Temizleme >
+                    <img src="images/umraniye-kuru-temizleme-karsilama-alani.webp" alt="ümraniye Kuru Temizleme">
                 </div>
                 <div class="text-side">
                     <h3>İlk Adımda Başlayan Kusursuzluk</h3>
@@ -711,7 +597,7 @@
         <div class="container">
             <div class="grid-2 reverse">
                 <div class="side-image">
-                    <img src="images/dış.webp" alt="ümraniye kuru temizleme">
+                    <img src="images/umraniye-kuru-temizleme-dis-gorunus.webp" alt="ümraniye kuru temizleme">
                 </div>
                 <div class="text-side">
                     <h3>Görünmeyen Güç: Gelişmiş İç Mekan Teknolojimiz</h3>
@@ -833,11 +719,66 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Premium Kuru Temizleme - Tüm Hakları Saklıdır. Dükkanınız için Sevgi ve Teknolojiyle Tasarlanmıştır.</p>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>Dry Dutch Kuru Temizleme</h3>
+            <p>
+                Dry Dutch Ümraniye kuru temizleme olarak profesyonel kuru temizleme, ütüleme ve tekstil bakım
+                hizmetleri sunuyoruz. Modern ekipmanlarımız ve kaliteli temizlik
+                çözümlerimiz sayesinde kıyafetlerinizi ilk günkü görünümüne
+                kavuşturuyor, zamandan tasarruf etmenizi sağlıyoruz.
+            </p>
         </div>
-    </footer>
+
+       <div class="footer-col">
+    <h3>Bize Ulaşın</h3>
+
+    <div class="footer-item">
+        📞
+        <a href="https://wa.me/905321725404"
+           target="_blank"
+           class="footer-link">
+            0532 172 54 04 
+            
+        </a>
+      <a href="tel:+905321725404"
+   class="footer-link">
+   0532 172 54 04 
+ </a>
+    </div>
+
+    <div class="footer-item">
+        📍
+        <a href="https://www.google.com/maps/place/Dry+dutch+kurutemizleme/@41.0165414,29.0859322,851m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14cac8915360157d:0x68613bce18296a0!8m2!3d41.0165375!4d29.0908031!16s%2Fg%2F11c6s6ltk1?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D"
+           target="_blank"
+           class="footer-link">
+            Esenevler, Yunus Emre Cd. 7/A, 34762 Ümraniye / İstanbul
+        </a>
+    </div>
+</div>
+        <div class="footer-col">
+            <h3>Hizmet Bölgeleri</h3>
+
+            <ul>
+                  <li>Ümraniye Kuru Temizleme</li>
+    <li>Ümraniye Esenevler Kuru Temizleme</li>
+     <li>Ümraniye Çarşı Kuru Temizleme</li>
+    <li>Ümraniye Son Durak Kuru Temizleme</li>
+    <li>Ümraniye Namazgah Kuru Temizleme</li>
+    <li>Ümraniye Armağanevler Kuru Temizleme</li>
+    <li>Ümraniye CanPark Kuru Temizleme</li>
+    <li> Ümraniye Meydan Kuru Temizleme</li> 
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Dry Dutch Kuru Temizleme - Tüm Hakları Saklıdır.
+    </div>
+</footer>
 <script src="drydutch.js"></script>
 </body>
 </html>
