@@ -109,6 +109,26 @@ let cart = {};
 window.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   updateCartCountUI();
+
+  // URL parametresinden kategori seçimi (SEO ve Site İçi Linkler için)
+  const urlParams = new URLSearchParams(window.location.search);
+  const cat = urlParams.get('cat');
+  if (cat) {
+    const sidebarLinks = document.querySelectorAll('.sidebar-items');
+    for (let link of sidebarLinks) {
+      const onclickAttr = link.getAttribute('onclick') || '';
+      if (onclickAttr.toLowerCase().includes(`changecategory('${cat.toLowerCase()}'`)) {
+        link.click();
+        const container = document.getElementById('product-container');
+        if (container) {
+          setTimeout(() => {
+            container.scrollIntoView({ behavior: 'smooth' });
+          }, 300);
+        }
+        break;
+      }
+    }
+  }
 });
 
 /* =======================
