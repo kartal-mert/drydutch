@@ -366,6 +366,14 @@ function sendToWhatsApp() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    const preloader = document.getElementById("dd-preloader");
+
+    // Eğer sayfada preloader yoksa, doğrudan scroll'u aç ve çık.
+    if (!preloader) {
+        document.body.classList.add("dd-loaded");
+        return;
+    }
+
     const kirliTisort = document.getElementById("dd-kirli-tisort");
     const buyutec = document.getElementById("dd-buyutec");
     const ilac = document.getElementById("dd-ilac");
@@ -373,13 +381,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const temizTisort = document.getElementById("dd-temiz-tisort");
     const utu = document.getElementById("dd-utu");
     const paket = document.getElementById("dd-paket");
-    const preloader = document.getElementById("dd-preloader");
 
     // İlk ziyaret kontrolü
     if (sessionStorage.getItem("ddPreloaderShown")) {
-        if (preloader) {
-            preloader.style.display = "none";
-        }
+        preloader.style.display = "none";
         document.body.classList.add("dd-loaded");
         return;
     }

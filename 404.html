@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa Bulunamadı | Dry Dutch Ümraniye Kuru Temizleme</title>
+    <meta name="robots" content="noindex, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="drydutch.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b, #0ea5e9);
+            color: #fff;
+            min-height: 100vh;
+        }
+        .background {
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 40%),
+                radial-gradient(circle at 80% 30%, rgba(255,255,255,0.06), transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(255,255,255,0.05), transparent 40%);
+            z-index: -1;
+        }
+        .error-container {
+            max-width: 800px;
+            margin: 100px auto 140px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .error-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(14px);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .error-card h1 {
+            font-size: 6rem;
+            color: #d4af37;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1;
+            text-shadow: 0 4px 15px rgba(212,175,55,0.2);
+        }
+        .error-card h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .error-card p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .error-btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn-error {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn-home {
+            background: #d4af37;
+            color: #0f172a;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn-home:hover {
+            background: #c29d2c;
+            transform: translateY(-3px);
+        }
+        .btn-contact {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+        }
+        .btn-contact:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+<div class="background"></div>
+<nav class="luxury-nav">
+    <a href="index.html" class="brand-logo">
+        <div class="logo-container">
+            <img src="images/umraniye-kuru-temizleme-drydutch-logo.webp" class="logo-img" alt="ümraniye-kuru-temizleme">
+        </div>
+        <span class="logo-text">Dry Dutch</span>
+    </a>
+    <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="menu-link">Ana sayfa</a>
+        <a href="about.html" class="menu-link">Hakkında</a>
+        <a href="blog.html" class="menu-link">Blog</a>
+        <a href="iletisim.html" class="menu-link">İletişim</a>
+    </div>
+    <div class="nav-actions">
+        <button class="luxury-hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<main class="error-container">
+    <div class="error-card">
+        <h1>404</h1>
+        <h2>Aradığınız Sayfa Bulunamadı</h2>
+        <p>Girmek istediğiniz sayfa silinmiş, ismi değiştirilmiş veya geçici olarak kullanım dışı olabilir. Aşağıdaki butonları kullanarak sitemizde gezinmeye devam edebilirsiniz.</p>
+        <div class="error-btn-group">
+            <a href="index.html" class="btn-error btn-home">
+                <i class="fa-solid fa-house"></i> Ana Sayfa'ya Dön
+            </a>
+            <a href="iletisim.html" class="btn-error btn-contact">
+                <i class="fa-solid fa-envelope"></i> İletişim'e Geç
+            </a>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Bize Ulaşın</h3>
+            <div class="footer-item" style="margin-bottom: 15px;">
+                📞 <a href="https://wa.me/905321725404" target="_blank" class="footer-link">WhatsApp: 0532 172 54 04</a>
+                <br>
+                📞 <a href="tel:+905321725404" class="footer-link">Telefon: 0532 172 54 04</a>
+            </div>
+            <div class="footer-item" style="margin-bottom: 25px;">
+                📍 <a href="https://www.google.com/maps/place/Dry+dutch+kurutemizleme/@41.0165414,29.0859322,851m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14cac8915360157d:0x68613bce18296a0!8m2!3d41.0165375!4d29.0908031!16s%2Fg%2F11c6s6ltk1?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="footer-link">
+                    Esenevler, Yunus Emre Cd. 7/A, Ümraniye / İstanbul
+                </a>
+            </div>
+            <h3>Hızlı Menü</h3>
+            <ul>
+                <li><a href="index.html" class="footer-link">Ana Sayfa</a></li>
+                <li><a href="about.html" class="footer-link">Hakkımızda</a></li>
+                <li><a href="blog.html" class="footer-link">Blog</a></li>
+                <li><a href="iletisim.html" class="footer-link">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Hizmetlerimiz</h3>
+            <ul>
+                <li><a href="umraniye-kuru-temizleme.html" class="footer-link">Ümraniye Kuru Temizleme</a></li>
+                <li><a href="umraniye-takim-elbise-kuru-temizleme.html" class="footer-link">Ümraniye Takım Elbise Temizliği</a></li>
+                <li><a href="umraniye-gelinlik-kuru-temizleme.html" class="footer-link">Ümraniye Gelinlik Kuru Temizleme</a></li>
+                <li><a href="umraniye-ayakkabi-temizleme-lostra.html" class="footer-link">Ümraniye Lostra &amp; Ayakkabı Bakımı</a></li>
+                <li><a href="umraniye-hali-yikama.html" class="footer-link">Ümraniye Halı Yıkama</a></li>
+                <li><a href="umraniye-perde-temizleme.html" class="footer-link">Ümraniye Perde Temizliği</a></li>
+                <li><a href="umraniye-utu-hizmeti.html" class="footer-link">Ümraniye Profesyonel Ütü Hizmeti</a></li>
+                <li><a href="umraniye-ev-tekstili-temizleme.html" class="footer-link">Ümraniye Ev Tekstili Temizliği</a></li>
+                <li><a href="umraniye-canta-temizleme.html" class="footer-link">Ümraniye Çanta Temizliği</a></li>
+                <li><a href="umraniye-kuru-temizleme-fiyatlari.html" class="footer-link">Ümraniye Kuru Temizleme Fiyatları</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Hizmet Bölgeleri</h3>
+            <ul>
+                <li><a href="blog.html#umraniye-yamanevler" class="footer-link">Ümraniye Yamanevler Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-tepeustu" class="footer-link">Ümraniye Tepeüstü Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-tatlisu" class="footer-link">Ümraniye Tatlısu Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-serifali" class="footer-link">Ümraniye Şerifali Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-site" class="footer-link">Ümraniye Site Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-mehmetakif" class="footer-link">Ümraniye Mehmet Akif Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-istiklal" class="footer-link">Ümraniye İstiklal Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-finanskent" class="footer-link">Ümraniye Finanskent Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-esenevler" class="footer-link">Ümraniye Esenevler Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-cakmak" class="footer-link">Ümraniye Çakmak Kuru Temizleme</a></li>
+                <li><a href="blog.html#umraniye-bulgurlu" class="footer-link">Ümraniye Bulgurlu Kuru Temizleme</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2026 Dry Dutch Kuru Temizleme - Tüm Hakları Saklıdır. | Ümraniye Kuru Temizleme ve Lostra Hizmetleri
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        if (menu) menu.classList.toggle("active");
+    }
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   "description": "Dry Dutch Kuru Temizleme Web Sitesi",
   "main": "index.html",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite --host"
   },
   "keywords": [
     "drydutch",
