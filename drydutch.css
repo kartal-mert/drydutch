@@ -793,85 +793,6 @@ body {
     .product-container-wrapper .product {
         grid-template-columns: repeat(2, 1fr) !important; 
         gap: 15px;
-    }
-}
-/* Footer Ana Kapsayıcı */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    overflow-x: hidden; /* Yatay kaydırmayı engeller */
-    width: 100%;
-}
-.footer {
-    background: linear-gradient(180deg, #244766 0%, #1b5a7c 100%);
-    color: #fff;
-    padding: 70px 5% 25px; /* Yüzdelik padding ile esneklik sağlandı */
-    margin-top: 0;
-    width: 100%;
-    box-sizing: border-box; /* Padding'in genişliği bozmasını engeller */
-}
-
-/* İçerik Yönetimi */
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Esnek sütun yapısı */
-    gap: 40px;
-    max-width: 1200px; /* Çok geniş ekranlarda içeriğin yayılmasını engeller */
-    margin: 0 auto;    /* Ortalar */
-}
-
-.footer-col h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-}
-
-.footer-col p {
-    line-height: 1.8;
-    color: rgba(255,255,255,.85);
-    font-size: 15px;
-}
-
-/* Linkler ve Liste */
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 12px;
-}
-
-.footer-link {
-    color: rgba(255,255,255,.85);
-    text-decoration: none;
-    transition: 0.3s;
-    display: inline-block; /* Hover için gerekli */
-}
-
-.footer-link:hover {
-    color: #d8f3ff;
-    transform: translateX(6px);
-}
-
-/* Alt Çizgi */
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,.15);
-    margin-top: 40px;
-    padding-top: 20px;
-    text-align: center;
-    color: rgba(255,255,255,.6);
-    font-size: 13px;
-}
-
-/* Mobil için özel ayarlar */
-@media(max-width: 768px) {
-    .footer {
         padding: 40px 20px;
     }
     .footer-container {
@@ -897,16 +818,319 @@ body {
 
 
 
+/* ==========================================================================
+   FOOTER REDESIGN (TERAWULF STYLE STYLING)
+   ========================================================================== */
+.footer {
+    background-color: #4d627a; /* Slate blue/grey as in image */
+    color: #ffffff;
+    padding: 80px 5% 40px;
+    margin-top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
 
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.3fr 1.3fr;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
 
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+/* Logo column styling */
+.footer-logo-col {
+    align-items: center;
+}
 
+.footer-logo-wrapper {
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
 
+.footer-logo-wrapper:hover {
+    transform: scale(1.05);
+}
 
+.footer-logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
+.footer-logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
 
+/* Badge/Badge-like Title for columns */
+.footer-badge-title {
+    background: rgba(0, 0, 0, 0.18);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    align-self: center;
+    margin-bottom: 20px;
+}
 
+/* Links lists */
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.footer-links-list li {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Contact information styles */
+.footer-contact-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.footer-contact-list i {
+    margin-top: 3px;
+    width: 16px;
+    text-align: center;
+}
+
+.footer-address-link {
+    white-space: normal;
+}
+
+/* Subscribe column styling */
+.footer-subscribe-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-subscribe-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+.footer-subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-subscribe-input {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 14px 16px;
+    border-radius: 4px;
+    color: #ffffff;
+    width: 100%;
+    font-size: 13.5px;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-subscribe-input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.footer-subscribe-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-subscribe-btn {
+    background: #ffffff;
+    color: #4d627a;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 12px 24px;
+    border: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    align-self: flex-start;
+}
+
+.footer-subscribe-btn:hover {
+    background: #eef2f5;
+    transform: translateY(-2px);
+}
+
+.footer-subscribe-btn i {
+    transition: transform 0.2s ease;
+}
+
+.footer-subscribe-btn:hover i {
+    transform: translateX(3px);
+}
+
+/* Footer Bottom Area styling */
+.footer-bottom-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.footer-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-social-icons a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-icons a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.footer-bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-link:hover {
+    color: #ffffff;
+}
+
+.footer-bottom-separator {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1100px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .footer-logo-col {
+        grid-column: span 2;
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 20px;
+    }
+    .footer-logo-wrapper {
+        margin-bottom: 10px;
+    }
+    .footer-bottom-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer-bottom-left {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 20px 30px;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .footer-logo-col {
+        grid-column: span 1;
+    }
+    .footer-badge-title {
+        margin-bottom: 15px;
+    }
+    .footer-subscribe-btn {
+        align-self: stretch;
+    }
+}
 
 /* Genel Sayfa Ayarları */
 * {
@@ -1169,80 +1393,7 @@ body.dd-loaded {
 /* ==========================================================================
    MOBILE & CENTERING FOOTER ADDITIONS (PHASE 2)
    ========================================================================== */
-.footer-col-centered {
-    text-align: center;
-}
-.footer-col-centered .footer-item {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 15px;
-    text-align: center;
-}
-.footer-col-centered .footer-link {
-    text-align: center;
-}
-
-@media(max-width: 768px) {
-    .footer {
-        padding: 50px 20px 25px !important;
-        text-align: center !important;
-    }
-    .footer-container {
-        grid-template-columns: 1fr !important;
-        gap: 40px !important;
-    }
-    .footer-col {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-    }
-    .footer-col p {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    .footer-col ul {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 0 !important;
-        width: 100% !important;
-    }
-    .footer-col ul li {
-        width: 100% !important;
-        text-align: center !important;
-        margin-bottom: 10px !important;
-    }
-    .footer-link {
-        text-align: center !important;
-    }
-}
-
-/* Footer Centering Improvement */
-.footer-col-centered {
-    text-align: center !important;
-}
-.footer-col-centered h3, 
-.footer-col-centered h4 {
-    text-align: center !important;
-}
-.footer-col-centered .footer-item {
-    display: inline-block !important;
-    width: 100% !important;
-    margin-bottom: 15px !important;
-    text-align: center !important;
-}
-.footer-col-centered .footer-item a {
-    text-align: center !important;
-}
-
-/* Intermediate screen sizes (Tablets / Laptops) */
-@media (min-width: 769px) and (max-width: 1100px) {
-    .footer-container {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 40px !important;
-    }
-}
+/* Footer Centering & Mobile overrides removed in favor of grouped responsive styles above */
 
 /* Mobile Overrides for Header Logo, Cart Sidebar and Product Categories */
 @media (max-width: 768px) {
