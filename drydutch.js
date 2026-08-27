@@ -1,6 +1,4 @@
-/* =======================
-   PRODUCTS DATA
-======================= */
+
 const productsData = {
   kuruTemizleme: [
     { id: 'k1', name: 'Gömlek', price: 200, img: 'images/umraniye-kuru-temizleme-takim-elbise-gomlek.webp' },
@@ -103,14 +101,12 @@ const productsData = {
 let currentCategory = 'kuruTemizleme';
 let cart = {};
 
-/* =======================
-   INIT
-======================= */
+
 window.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   updateCartCountUI();
 
-  // URL parametresinden kategori seçimi (SEO ve Site İçi Linkler için)
+  
   const urlParams = new URLSearchParams(window.location.search);
   const cat = urlParams.get('cat');
   if (cat) {
@@ -131,17 +127,13 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/* =======================
-   MENU
-======================= */
+
 function toggleMenu() {
   const menu = document.getElementById("navMenu");
   if (menu) menu.classList.toggle("active");
 }
 
-/* =======================
-   RENDER PRODUCTS
-======================= */
+
 function renderProducts(filterText = '') {
   const container = document.getElementById('product-container');
   if (!container) return;
@@ -181,14 +173,12 @@ function renderProducts(filterText = '') {
 }
 
 
-/* =======================
-   CATEGORY CHANGE (DÜZELTİLDİ)
-======================= */
+
 function changeCategory(key, el, event) {
-  // Sayfanın yukarı kaymasını engelle
+  
   if (event) event.preventDefault();
 
-  // ✅ FIX: case uyuşmazlığını çözüyor
+  
   currentCategory = key.charAt(0).toLowerCase() + key.slice(1);
 
   document.querySelectorAll('.sidebar-items')
@@ -202,17 +192,13 @@ function changeCategory(key, el, event) {
   renderProducts();
 }
 
-/* =======================
-   SEARCH
-======================= */
+
 function searchProducts() {
   const input = document.getElementById('search-input');
   renderProducts(input ? input.value : '');
 }
 
-/* =======================
-   CART
-======================= */
+
 function addToCart(id) {
   cart[id] = (cart[id] || 0) + 1;
   updateUI(id);
@@ -244,16 +230,12 @@ function updateCartCountUI() {
   if (el) el.innerText = total;
 }
 
-/* =======================
-   UÇAN ANİMASYON
-======================= */
+
 function animateFlyToCart(event, id) {
   addToCart(id);
 }
 
-/* =======================
-   SIDEBAR CART
-======================= */
+
 function syncSidebarCart() {
   const container = document.getElementById('sidebar-cart-list-container');
   if (!container) return;
@@ -295,9 +277,7 @@ function syncSidebarCart() {
     "Toplam: " + total + " TL";
 }
 
-/* =======================
-   CART OPEN / CLOSE
-======================= */
+
 function openCartSidebar() {
   syncSidebarCart();
   document.getElementById("cartSidebar").classList.add("active");
@@ -368,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const preloader = document.getElementById("dd-preloader");
 
-    // Eğer sayfada preloader yoksa, doğrudan scroll'u aç ve çık.
+    
     if (!preloader) {
         document.body.classList.add("dd-loaded");
         return;
@@ -382,7 +362,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const utu = document.getElementById("dd-utu");
     const paket = document.getElementById("dd-paket");
 
-    // İlk ziyaret kontrolü
+    
     if (sessionStorage.getItem("ddPreloaderShown")) {
         preloader.style.display = "none";
         document.body.classList.add("dd-loaded");
@@ -391,48 +371,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sessionStorage.setItem("ddPreloaderShown", "true");
 
-    // 1. Kirli Tişört
+    
     setTimeout(() => {
         kirliTisort.classList.add("active");
-    }, 100);
+    }, 50);
 
-    // 2. Büyüteç
+    
     setTimeout(() => {
         buyutec.classList.add("active");
-    }, 400);
+    }, 200);
 
-    // 3. İlaç
+    
     setTimeout(() => {
         buyutec.classList.remove("active");
         ilac.classList.add("active");
-    }, 900);
+    }, 450);
 
-    // 4. Makine
+    
     setTimeout(() => {
         ilac.classList.remove("active");
         makine.classList.add("active");
-    }, 1500);
+    }, 750);
 
-    // 5. Temiz Tişört
+    
     setTimeout(() => {
         makine.classList.remove("active");
         kirliTisort.classList.remove("active");
         temizTisort.classList.add("active");
-    }, 2200);
+    }, 1100);
 
-    // 6. Ütü
+    
     setTimeout(() => {
         utu.classList.add("active");
-    }, 2800);
+    }, 1400);
 
-    // 7. Paket
+    
     setTimeout(() => {
         utu.classList.remove("active");
         temizTisort.classList.remove("active");
         paket.classList.add("active");
-    }, 3400);
+    }, 1700);
 
-    // 8. Kapat
+    
     setTimeout(() => {
 
         preloader.style.opacity = "0";
@@ -440,6 +420,166 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.body.classList.add("dd-loaded");
 
-    }, 4000);
+    }, 2000);
 
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById('reviewsTrack');
+    const cards = document.querySelectorAll('.review-card');
+    const dotsContainer = document.getElementById('reviewsDots');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    if (!track || !cards.length) return;
+
+    let currentIndex = 0;
+    let autoPlayTimer = null;
+    const gap = 20;
+
+    function getVisibleCardsCount() {
+        if (window.innerWidth <= 768) return 1;
+        if (window.innerWidth <= 992) return 2;
+        return 3;
+    }
+
+    function updateSlider() {
+        const visibleCards = getVisibleCardsCount();
+        const maxIndex = Math.max(0, cards.length - visibleCards);
+        
+        if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+        }
+
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const offset = currentIndex * (cardWidth + gap);
+        track.style.transform = `translate3d(-${offset}px, 0, 0)`;
+
+        
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function setupDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = '';
+        const visibleCards = getVisibleCardsCount();
+        const maxIndex = Math.max(0, cards.length - visibleCards);
+        
+        for (let i = 0; i <= maxIndex; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot' + (i === 0 ? ' active' : '');
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                updateSlider();
+                resetAutoPlay();
+            });
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    function slideNext() {
+        const visibleCards = getVisibleCardsCount();
+        const maxIndex = Math.max(0, cards.length - visibleCards);
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; 
+        }
+        updateSlider();
+    }
+
+    function slidePrev() {
+        const visibleCards = getVisibleCardsCount();
+        const maxIndex = Math.max(0, cards.length - visibleCards);
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = maxIndex; 
+        }
+        updateSlider();
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            slideNext();
+            resetAutoPlay();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            slidePrev();
+            resetAutoPlay();
+        });
+    }
+
+    function startAutoPlay() {
+        if (autoPlayTimer) clearInterval(autoPlayTimer);
+        autoPlayTimer = setInterval(slideNext, 5000);
+    }
+
+    function resetAutoPlay() {
+        startAutoPlay();
+    }
+
+    
+    const reviewsSection = document.querySelector('.reviews-section');
+    if (reviewsSection) {
+        reviewsSection.addEventListener('mouseenter', () => {
+            if (autoPlayTimer) {
+                clearInterval(autoPlayTimer);
+                autoPlayTimer = null;
+            }
+        });
+        reviewsSection.addEventListener('mouseleave', () => {
+            startAutoPlay();
+        });
+    }
+
+    
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchStartX - touchEndX > swipeThreshold) {
+            slideNext();
+            resetAutoPlay();
+        } else if (touchEndX - touchStartX > swipeThreshold) {
+            slidePrev();
+            resetAutoPlay();
+        }
+    }
+
+    
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            setupDots();
+            updateSlider();
+        }, 100);
+    });
+
+    
+    setupDots();
+    updateSlider();
+    startAutoPlay();
 });

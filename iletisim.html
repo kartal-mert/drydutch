@@ -18,15 +18,17 @@
     <meta name="twitter:title" content="İletişim | Dry Dutch Ümraniye Kuru Temizleme &amp; Telefon">
     <meta name="twitter:description" content="Dry Dutch Ümraniye kuru temizleme iletişim bilgileri, telefon ve harita konumu. Siparişinizi kapınızdan alalım.">
     <meta name="twitter:image" content="https://www.drydutch.com/images/umraniye-kuru-temizleme-drydutch-logo.webp">
+    <link rel="icon" type="image/webp" href="images/umraniye-kuru-temizleme-drydutch-logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="drydutch.css">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="drydutch.css">
 
 
     <style>
-        /* RESET & GENEL */
+        
         * {
             margin: 0;
             padding: 0;
@@ -39,7 +41,7 @@
             font-family: "Roboto Condensed", sans-serif;
         }
 
-        /* BACKGROUND */
+        
         .tdm-bg-container {
             width: 100%;
             min-height: 100vh;
@@ -65,7 +67,7 @@
             }
         }
 
-        /* MENU LIST */
+        
         .tdm-menu-list {
             display: flex;
             gap: 65px;
@@ -89,7 +91,7 @@
             color: #333;
         }
 
-        /* HOVER RENKLERİ GERİ GELDİ */
+        
         .tdm-menu-item:nth-child(1) .tdm-menu-link:hover {
             background: #25D366;
             color: #fff;
@@ -136,7 +138,7 @@
             font-weight: 700;
         }
 
-        /* 3D EFEKT */
+        
         .tdm-menu-link:before {
             content: '';
             position: absolute;
@@ -159,7 +161,7 @@
             transform: skewX(-45deg);
         }
 
-        /* MOBİL DÜZENLEMELER */
+        
         @media(max-width: 992px) {
             .tdm-menu-list {
                 flex-direction: column;
@@ -194,28 +196,26 @@
 
 <body>
     <nav class="luxury-nav">
-        <a href="index.html" class="brand-logo">
+    <a href="index.html" class="brand-logo">
         <div class="logo-container">
             <img src="images/umraniye-kuru-temizleme-drydutch-logo.webp" class="logo-img" alt="ümraniye-kuru-temizleme">
         </div>
         <span class="logo-text">Dry Dutch</span>
     </a>
-
-        <div class="nav-menu" id="navMenu">
-            <a href="index.html" class="menu-link">Ana sayfa</a>
-            <a href="about.html" class="menu-link">Hakkında</a>
-            <a href="blog.html" class="menu-link">Blog</a>
-            <a href="iletisim.html" class="menu-link">İletişim</a>
-        </div>
-
-        <div class="nav-actions">
-            <button class="luxury-hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+    <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="menu-link">Ana sayfa</a>
+        <a href="about.html" class="menu-link">Hakkında</a>
+        <a href="blog.html" class="menu-link">Blog</a>
+        <a href="iletisim.html" class="menu-link">İletişim</a>
+    </div>
+    <div class="nav-actions">
+        <button class="luxury-hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
 
     <div class="tdm-bg-container" style="flex-direction: column; gap: 40px; padding: 120px 20px 40px;">
         <h1 style="color: #fff; text-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 2.5rem; text-align: center; font-family: 'Roboto Condensed', sans-serif;">Dry Dutch Ümraniye İletişim</h1>
@@ -263,7 +263,7 @@
 
     <footer class="footer">
     <div class="footer-container">
-        <!-- Logo Column -->
+        
         <div class="footer-col footer-logo-col">
             <div class="footer-logo-wrapper">
                 <img src="images/umraniye-kuru-temizleme-drydutch-logo.webp" alt="Dry Dutch Logo" class="footer-logo-img">
@@ -271,7 +271,7 @@
             <span class="footer-logo-text">DRY DUTCH</span>
         </div>
 
-        <!-- Column 1: Menü & İletişim -->
+        
         <div class="footer-col">
             <span class="footer-badge-title">MENÜ</span>
             <ul class="footer-links-list">
@@ -301,7 +301,7 @@
             </ul>
         </div>
 
-        <!-- Column 2: Hizmetlerimiz -->
+        
         <div class="footer-col">
             <span class="footer-badge-title">HİZMETLERİMİZ</span>
             <ul class="footer-links-list">
@@ -318,7 +318,7 @@
             </ul>
         </div>
 
-        <!-- Column 3: Hizmet Bölgeleri -->
+        
         <div class="footer-col">
             <span class="footer-badge-title">HİZMET BÖLGELERİ</span>
             <ul class="footer-links-list">
@@ -337,7 +337,7 @@
         </div>
     </div>
 
-    <!-- Bottom Section -->
+    
     <div class="footer-bottom-container">
         <div class="footer-bottom-left">
             <span class="footer-copyright">Dry Dutch © 2026 — Tüm Hakları Saklıdır.</span>

@@ -8,15 +8,13 @@ body {
     background: #faf9f6;
     color: #111;
     overflow-x: hidden;
-    /* DEĞİŞİKLİK: 100px olan padding değerini navbar yüksekliği olan 80px'e çektik */
+    
     padding-top: 80px; 
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 
-/* ======================
-    NAVBAR (UPDATED PHASE 3 - GLASSMORPHIC & PROTRUDING LOGO)
-====================== */
+
 .luxury-nav {
     position: fixed;
     top: 0;
@@ -27,9 +25,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(30, 61, 89, 0.45); /* Transparent deep blue theme color */
+    background: rgba(30, 61, 89, 0.45); 
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    -webkit-backdrop-filter: blur(20px); 
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
     z-index: 1000;
@@ -45,7 +43,7 @@ body {
 
 .logo-container {
     position: absolute;
-    top: -10px; /* Push logo upward slightly to overlap top/bottom of navbar */
+    top: -10px; 
     left: 0;
     width: 100px;
     height: 100px;
@@ -73,7 +71,7 @@ body {
 }
 
 .logo-text {
-    margin-left: 115px; /* Adjust margin to push text past the protruding logo */
+    margin-left: 115px; 
     color: white;
     font-size: 18px;
     letter-spacing: 2px;
@@ -156,7 +154,7 @@ body {
     font-weight: bold;
 }
 
-/* Sepet Canlanma Animasyonu */
+
 .cart-bounce {
     animation: cartPop 0.4s ease-out;
 }
@@ -167,7 +165,7 @@ body {
     100% { transform: scale(1); }
 }
 
-/* HAMBURGER */
+
 .luxury-hamburger {
     display: none;
     flex-direction: column;
@@ -204,26 +202,24 @@ body {
 
 
 
-/* ======================
-   PRODUCT LAYOUT & CARDS (GÜNCELLENEN KISIM)
-====================== */
+
 .container {
     width: 90vw;
     margin: 30px auto;
     display: flex;
     gap: 30px;
-    /* Menü sağda, ürünler solda olsun diye yer değiştiriyoruz */
+    
     flex-direction: row-reverse; 
 }
 
 .sidebar {
-    width: 20%; /* Biraz daralttık */
+    width: 20%; 
     display: flex;
     flex-direction: column;
 }
 
 .product {
-    width: 80%; /* Biraz genişlettik */
+    width: 80%; 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -235,7 +231,7 @@ body {
 
 @media (max-width: 768px) {
     .container { 
-        flex-direction: column; /* Mobilde tekrar alt alta alıyoruz */
+        flex-direction: column; 
     }
     .sidebar, .product { width: 100%; }
     .product { grid-template-columns: repeat(2, 1fr); gap: 15px; }
@@ -266,9 +262,9 @@ body {
 
 .product-img {
     width: 100%;
-    /* height: 200px;  <-- Bu satırı silin veya yorum satırı yapın */
-    aspect-ratio: 3 / 4; /* En-boy oranını dikey dikdörtgen yapar. İsterseniz 2/3 de yapabilirsiniz. */
-    object-fit: cover; /* Görselin oranını bozmadan kutuyu doldurmasını sağlar */
+    
+    aspect-ratio: 3 / 4; 
+    object-fit: cover; 
     border-radius: 12px;
     margin-bottom: 12px;
 }
@@ -287,9 +283,7 @@ body {
     margin-bottom: 12px;
 }
 
-/* ======================
-    MODERN COUNTER BADGE (YENİLENEN KISIM)
-====================== */
+
 .modern-counter {
     display: flex;
     align-items: center;
@@ -332,9 +326,7 @@ body {
     text-align: center;
 }
 
-/* ======================
-    SIDEBAR & SEARCH
-====================== */
+
 .sidebar-search {
     padding: 12px 16px;
     width: 100%;
@@ -372,9 +364,7 @@ body {
     border-color: #9c1032;
 }
 
-/* ======================
-    CART SIDEBAR
-====================== */
+
 .cart-sidebar {
     position: fixed;
     top: 0;
@@ -476,9 +466,7 @@ body {
 
 .overlay.active { display: block; }
 
-/* ======================
-    FLYING GLOW EFFECT (UÇAN GRAFİK)
-====================== */
+
 .flying-glow {
     position: fixed;
     width: 24px;
@@ -493,20 +481,20 @@ body {
 
 
 
-/* Google Fonts Entegrasyonu */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap');
 
 .hero-section {
     position: relative;
-    width: 100%; /* Ekran genişliğini tamamen kaplar */
+    width: 100%; 
     
-    /* DEĞİŞİKLİK: 1376x768 oranını tarayıcıya kilitledik. Genişlik değiştikçe yükseklik kendini fotoğrafı bozmadan otomatik ayarlar */
+    
     aspect-ratio: 1376 / 768; 
-    height: auto; /* Sabit yüksekliği kaldırıp orana bıraktık */
+    height: auto; 
     
     background: url('images/umraniye-drydutch-kuru-temizleme-magazasi.webp') no-repeat center center;
-    background-size: contain; /* Fotoğrafın hiçbir yeri kırpılmaz, tam olarak görünür */
-    background-color: #171b21; /* Fotoğrafın bittiği yerlerde (varsa) arka planın sırıtmaması için koyu renk */
+    background-size: contain; 
+    background-color: #171b21; 
     
     display: flex;
     align-items: center;
@@ -515,7 +503,7 @@ body {
     margin-top: 0; 
 }
 
-/* Sol taraftaki yazıların okunurluğunu artıran gölge katmanı */
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -570,7 +558,7 @@ body {
     font-weight: 300;
 }
 
-/* Tekil Buton Tasarımı */
+
 .hero-buttons {
     display: flex;
 }
@@ -594,14 +582,14 @@ body {
     box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
-/* Mobil Uyumluluk */
+
 @media (max-width: 992px) {
     .hero-title {
         font-size: 38px;
     }
 }
 
-/* Mobil Uyumluluk */
+
 @media (max-width: 992px) {
     .hero-title {
         font-size: 38px;
@@ -610,17 +598,17 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-        /* Ekranı dikeyde güzelce doldursun diye oranı koruduk */
+        
         aspect-ratio: 4 / 5; 
         
-        /* DEĞİŞİKLİK: Görselin sağ tarafını kadraja almak için 'right center' olarak ayarladık */
-        /* Ayrıca yazıların okunması için arkaya şık bir karartma gradient'i ekledik */
+        
+        
         background: linear-gradient(to right, rgba(23, 27, 33, 0.85) 30%, rgba(23, 27, 33, 0.3) 100%), 
                     url('images/umraniye-drydutch-kuru-temizleme-magazasi.webp') no-repeat right center;
         background-size: cover;
     }
     
-    /* Masaüstünden kalan eski katmanı mobilde ezdik */
+    
     .hero-section::before {
         display: none;
     }
@@ -667,7 +655,7 @@ body {
     min-height: 100vh;
 }
 
-/* ARKA PLAN PARÇACIK */
+
 .background {
     position: fixed;
     inset: 0;
@@ -678,7 +666,7 @@ body {
     z-index: -1;
 }
 
-/* HEADER */
+
 .header {
     text-align: center;
     padding: 60px 20px 20px;
@@ -694,7 +682,7 @@ body {
     opacity: 0.8;
 }
 
-/* CONTAINER */
+
 .container {
     max-width: 1100px;
     margin: auto;
@@ -704,7 +692,7 @@ body {
     gap: 20px;
 }
 
-/* CARD */
+
 .card {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -732,7 +720,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* FOOTER */
+
 .footer {
     text-align: center;
     padding: 30px;
@@ -740,7 +728,7 @@ body {
     opacity: 0.6;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 600px) {
     .header h1, .header h2 {
         font-size: 28px;
@@ -753,24 +741,24 @@ body {
 
 
 
-/* Sadece ürünlerin olduğu kısmı hedefliyoruz */
+
 .product-container-wrapper {
     width: 90vw;
     margin: 30px auto;
     display: flex;
     gap: 30px;
-    /* Sidebar'ı sağa atmak için row-reverse kullanıyoruz */
+    
     flex-direction: row-reverse;
 }
 
-/* Sidebar genişliği */
+
 .product-container-wrapper .sidebar {
     width: 20%; 
     display: flex;
     flex-direction: column;
 }
 
-/* Ürün grid alanı */
+
 .product-container-wrapper .product {
     width: 80%;
     display: grid;
@@ -778,10 +766,10 @@ body {
     gap: 25px;
 }
 
-/* Mobil için özel düzenleme */
+
 @media (max-width: 768px) {
     .product-container-wrapper {
-        flex-direction: column; /* Mobilde sidebar üstte, ürünler altta olur */
+        flex-direction: column; 
     }
     
     .product-container-wrapper .sidebar, 
@@ -789,7 +777,7 @@ body {
         width: 100%;
     }
 
-    /* BURASI ÖNEMLİ: Ürünlerin mobilde 2'li görünmesini sağlar */
+    
     .product-container-wrapper .product {
         grid-template-columns: repeat(2, 1fr) !important; 
         gap: 15px;
@@ -818,11 +806,9 @@ body {
 
 
 
-/* ==========================================================================
-   FOOTER REDESIGN (TERAWULF STYLE STYLING)
-   ========================================================================== */
+
 .footer {
-    background-color: #4d627a; /* Slate blue/grey as in image */
+    background-color: #4d627a; 
     color: #ffffff;
     padding: 80px 5% 40px;
     margin-top: 0;
@@ -835,7 +821,7 @@ body {
     display: grid;
     grid-template-columns: 1.2fr 1fr 1.3fr 1.3fr;
     gap: 40px;
-    max-width: 1300px;
+    max-width: 100%;
     margin: 0 auto;
     padding-bottom: 50px;
 }
@@ -847,7 +833,7 @@ body {
     text-align: center;
 }
 
-/* Logo column styling */
+
 .footer-logo-col {
     align-items: center;
 }
@@ -886,7 +872,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Badge/Badge-like Title for columns */
+
 .footer-badge-title {
     background: rgba(0, 0, 0, 0.18);
     color: #ffffff;
@@ -901,7 +887,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Links lists */
+
 .footer-links-list {
     list-style: none;
     padding: 0;
@@ -930,7 +916,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Contact information styles */
+
 .footer-contact-list li {
     display: flex;
     align-items: center;
@@ -951,7 +937,7 @@ body {
     white-space: normal;
 }
 
-/* Subscribe column styling */
+
 .footer-subscribe-col {
     display: flex;
     flex-direction: column;
@@ -1022,14 +1008,14 @@ body {
     transform: translateX(3px);
 }
 
-/* Footer Bottom Area styling */
+
 .footer-bottom-container {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1300px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -1086,7 +1072,7 @@ body {
     font-size: 12px;
 }
 
-/* Responsive Overrides */
+
 @media (max-width: 1100px) {
     .footer-container {
         grid-template-columns: 1fr 1fr;
@@ -1132,7 +1118,7 @@ body {
     }
 }
 
-/* Genel Sayfa Ayarları */
+
 * {
     margin: 0;
     padding: 0;
@@ -1144,7 +1130,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* PRELOADER */
+
 
 #dd-preloader {
     position: fixed;
@@ -1168,7 +1154,7 @@ body {
     transition: opacity .8s ease, visibility .8s ease;
 }
 
-/* ANİMASYON ALANI */
+
 
 .dd-preloader-container {
     position: relative;
@@ -1196,13 +1182,13 @@ body {
     object-fit: contain;
 }
 
-/* KİRLİ TİŞÖRT */
+
 
 #dd-kirli-tisort.active {
     opacity: 1;
 }
 
-/* BÜYÜTEÇ */
+
 
 #dd-buyutec {
     transform: scale(.8);
@@ -1213,7 +1199,7 @@ body {
     transform: scale(1.1);
 }
 
-/* İLAÇ */
+
 
 #dd-ilac {
     transform: translateY(-50px);
@@ -1224,7 +1210,7 @@ body {
     transform: translateY(0);
 }
 
-/* MAKİNE */
+
 
 #dd-makine {
     transform: scale(.5);
@@ -1236,7 +1222,7 @@ body {
     z-index: 10;
 }
 
-/* TEMİZ TİŞÖRT */
+
 
 #dd-temiz-tisort {
     transform: translateX(-100px);
@@ -1247,7 +1233,7 @@ body {
     transform: translateX(0);
 }
 
-/* ÜTÜ */
+
 
 #dd-utu {
     transform: translateX(150px) translateY(50px);
@@ -1258,7 +1244,7 @@ body {
     transform: translateX(30px) translateY(20px);
 }
 
-/* PAKET */
+
 
 #dd-paket {
     transform: scale(.9);
@@ -1269,7 +1255,7 @@ body {
     transform: scale(1);
 }
 
-/* LOGO */
+
 
 .dd-brand-loading {
     position: absolute;
@@ -1331,7 +1317,7 @@ body {
     100% { content: ""; }
 }
 
-/* ANA SİTE */
+
 
 #main-content {
     padding: 50px;
@@ -1348,7 +1334,7 @@ body.dd-loaded {
     overflow: auto;
 }
 
-/* TABLET */
+
 
 @media (max-width: 768px) {
 
@@ -1367,7 +1353,7 @@ body.dd-loaded {
     }
 }
 
-/* TELEFON */
+
 
 @media (max-width: 480px) {
 
@@ -1390,12 +1376,10 @@ body.dd-loaded {
         font-size: 9px;
     }
 }
-/* ==========================================================================
-   MOBILE & CENTERING FOOTER ADDITIONS (PHASE 2)
-   ========================================================================== */
-/* Footer Centering & Mobile overrides removed in favor of grouped responsive styles above */
 
-/* Mobile Overrides for Header Logo, Cart Sidebar and Product Categories */
+
+
+
 @media (max-width: 768px) {
     .logo-container {
         width: 75px !important;
@@ -1420,14 +1404,14 @@ body.dd-loaded {
         padding: 5px 0 12px !important;
         width: 100% !important;
         scroll-behavior: smooth !important;
-        scrollbar-width: none !important; /* Hide scrollbar Firefox */
+        scrollbar-width: none !important; 
         -webkit-overflow-scrolling: touch !important;
     }
     .product-container-wrapper .sidebar::-webkit-scrollbar {
-        display: none !important; /* Hide scrollbar Chrome/Safari */
+        display: none !important; 
     }
     .product-container-wrapper .sidebar-search {
-        display: none !important; /* Hide search input on mobile */
+        display: none !important; 
     }
     .product-container-wrapper .sidebar-items {
         display: inline-block !important;
@@ -1447,4 +1431,257 @@ body.dd-loaded {
     .cart-sidebar.active {
         transform: translateX(-100%) !important;
     }
+}
+
+
+.reviews-section {
+    padding: 80px 5%;
+    background-color: #faf9f6;
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.reviews-header h2 {
+    font-size: 2.2rem;
+    color: #1e3d59; 
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.reviews-header h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #9c1032; 
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.reviews-header p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.reviews-slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.reviews-wrapper {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.review-card {
+    flex: 0 0 calc(33.333% - 13.33px);
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(30, 61, 89, 0.04);
+    border: 1px solid rgba(30, 61, 89, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    min-height: 280px;
+}
+
+.review-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(30, 61, 89, 0.1);
+}
+
+.review-stars {
+    color: #ffb100; 
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 4px;
+}
+
+.review-text {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    font-weight: 400;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 18px;
+    margin-top: auto;
+}
+
+.author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e3d59, #17b978);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(30, 61, 89, 0.15);
+    flex-shrink: 0;
+}
+
+
+.review-card:nth-child(2n) .author-avatar {
+    background: linear-gradient(135deg, #9c1032, #f5a623);
+}
+
+.review-card:nth-child(3n) .author-avatar {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.review-card:nth-child(4n) .author-avatar {
+    background: linear-gradient(135deg, #8a2387, #e94057);
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.author-name {
+    font-weight: 600;
+    color: #1e3d59;
+    font-size: 0.95rem;
+}
+
+.author-rating {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(30, 61, 89, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    color: #1e3d59;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: #1e3d59;
+    color: #ffffff;
+    border-color: #1e3d59;
+    box-shadow: 0 6px 20px rgba(30, 61, 89, 0.2);
+}
+
+.slider-btn:focus {
+    outline: none;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.reviews-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.reviews-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d1d5db;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reviews-dots .dot.active {
+    background: #1e3d59;
+    width: 22px;
+    border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+    .review-card {
+        flex: 0 0 calc(50% - 10px);
+    }
+    .reviews-slider-container {
+        padding: 0 20px;
+    }
+    .prev-btn {
+        left: -5px;
+    }
+    .next-btn {
+        right: -5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-section {
+        padding: 60px 4%;
+    }
+    .reviews-header h2 {
+        font-size: 1.8rem;
+    }
+    .review-card {
+        flex: 0 0 100%;
+        padding: 24px;
+        min-height: 250px;
+    }
+    .slider-btn {
+        display: none; 
+    }
+    .reviews-slider-container {
+        padding: 0;
+    }
+}
+
+.luxury-nav,
+.luxury-nav *:not(i):not([class*="fa-"]) {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
