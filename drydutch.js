@@ -32,9 +32,9 @@ const productsData = {
 
   takim: [
     { id: 't1', name: "Takım Elbise Seti (3'lü)", price: 700, img: 'images/umraniye-kuru-temizleme-takim-elbise-seti.webp' },
-    { id: 't2', name: 'Takım Elbise Pantolon', price: 200, img: 'images/umraniye-kuru-temizleme-takim-elbise-pantolon.webp' },
-    { id: 't3', name: 'Takım Elbise Ceket', price: 300, img: 'images/umraniye-kuru-temizleme-takim-elbise-ceket.webp' },
-    { id: 't4', name: 'Takım Elbise Gömlek', price: 200, img: 'images/umraniye-kuru-temizleme-takim-elbise-gomlek.webp' },
+    { id: 't2', name: 'Takım Elbise Pantolon', price: 300, img: 'images/umraniye-kuru-temizleme-takim-elbise-pantolon.webp' },
+    { id: 't3', name: 'Takım Elbise Ceket', price: 400, img: 'images/umraniye-kuru-temizleme-takim-elbise-ceket.webp' },
+    { id: 't4', name: 'Takım Elbise Gömlek', price: 300, img: 'images/umraniye-kuru-temizleme-takim-elbise-gomlek.webp' },
     { id: 't5', name: 'Takım Elbise Yelek', price: 300, img: 'images/umraniye-kuru-temizleme-yelek.webp' }
   ],
 
