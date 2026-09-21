@@ -1,26 +1,26 @@
 
 const productsData = {
   kuruTemizleme: [
-    { id: 'k1', name: 'Gömlek', price: 200, img: 'images/umraniye-kuru-temizleme-takim-elbise-gomlek.webp' },
-    { id: 'k2', name: 'Pantolon', price: 200, img: 'images/umraniye-kuru-temizleme-pantolon-temizligi.webp' },
-    { id: 'k3', name: 'Ceket', price: 300, img: 'images/umraniye-kuru-temizleme-ceket.webp' },
-    { id: 'k4', name: 'Takım Elbise', price: 500, img: 'images/umraniye-kuru-temizleme-takim-elbise-seti.webp' },
-    { id: 'k5', name: 'T-Shirt', price: 200, img: 'images/umraniye-kuru-temizleme-t-shirt.webp' },
-    { id: 'k6', name: 'Abiye Elbise', price: '1000-2000', img: 'images/umraniye-kuru-temizleme-abiye-elbise.webp' },
+    { id: 'k1', name: 'Gömlek', price: 300, img: 'images/umraniye-kuru-temizleme-takim-elbise-gomlek.webp' },
+    { id: 'k2', name: 'Pantolon', price: 300, img: 'images/umraniye-kuru-temizleme-pantolon-temizligi.webp' },
+    { id: 'k3', name: 'Ceket', price: 400, img: 'images/umraniye-kuru-temizleme-ceket.webp' },
+    { id: 'k4', name: 'Takım Elbise', price: 700, img: 'images/umraniye-kuru-temizleme-takim-elbise-seti.webp' },
+    { id: 'k5', name: 'T-Shirt', price: 300, img: 'images/umraniye-kuru-temizleme-t-shirt.webp' },
+    { id: 'k6', name: 'Abiye Elbise', price: 1700, img: 'images/umraniye-kuru-temizleme-abiye-elbise.webp' },
     { id: 'k7', name: 'Bayan Elbisesi', price: 500, img: 'images/umraniye-kuru-temizleme-bayan-elbisesi.webp' },
     { id: 'k8', name: 'Bluz', price: 600, img: 'images/umraniye-kuru-temizleme-bluz.webp' },
-    { id: 'k9', name: 'Döpiyes', price: 'Fiyat Alınız', img: 'images/umraniye-kuru-temizleme-dopiyes.webp' },
+    { id: 'k9', name: 'Döpiyes', price: 1700, img: 'images/umraniye-kuru-temizleme-dopiyes.webp' },
     { id: 'k10', name: 'Pileli Etek', price: 350, img: 'images/umraniye-kuru-temizleme-pileli-etek-temizligi.webp' },
     { id: 'k11', name: 'Etek', price: 300, img: 'images/umraniye-kuru-temizleme-etek.webp' },
-    { id: 'k12', name: 'Kaban', price: 500, img: 'images/umraniye-kuru-temizleme-kaban-temizligi.webp' },
-    { id: 'k13', name: 'Kazak', price: 200, img: 'images/umraniye-kuru-temizleme-kazak-temizligi.webp' },
-    { id: 'k15', name: 'Mont', price: 500, img: 'images/umraniye-kuru-temizleme-mont-temizligi.webp' },
+    { id: 'k12', name: 'Kaban', price: 700, img: 'images/umraniye-kuru-temizleme-kaban-temizligi.webp' },
+    { id: 'k13', name: 'Kazak', price: 300, img: 'images/umraniye-kuru-temizleme-kazak-temizligi.webp' },
+    { id: 'k15', name: 'Mont', price: 700, img: 'images/umraniye-kuru-temizleme-mont-temizligi.webp' },
     { id: 'k18', name: 'Kanguru', price: 350, img: 'images/umraniye-kuru-temizleme-kanguru-mont.webp' },
     { id: 'k19', name: 'Sweatshirt', price: 200, img: 'images/umraniye-kuru-temizleme-sweatshirt.webp' },
-    { id: 'k20', name: 'Trençkot', price: 500, img: 'images/umraniye-kuru-temizleme-trenckot.webp' },
-    { id: 'k21', name: 'Tunik', price: 'Fiyat Alınız', img: 'images/umraniye-kuru-temizleme-tunik.webp' },
+    { id: 'k20', name: 'Trençkot', price: 700, img: 'images/umraniye-kuru-temizleme-trenckot.webp' },
+    { id: 'k21', name: 'Tunik', price: 1700, img: 'images/umraniye-kuru-temizleme-tunik.webp' },
     { id: 'k23', name: 'Şişme Yelek', price: 500, img: 'images/umraniye-kuru-temizleme-sisme-yelek.webp' },
-    { id: 'k24', name: 'Kaz Tüyü Mont', price: 700, img: 'images/umraniye-kuru-temizleme-kaz-tuyu-mont.webp' }
+    { id: 'k24', name: 'Kaz Tüyü Mont', price: 800, img: 'images/umraniye-kuru-temizleme-kaz-tuyu-mont.webp' }
   ],
 
   gelinlik: [
@@ -31,7 +31,7 @@ const productsData = {
   ],
 
   takim: [
-    { id: 't1', name: "Takım Elbise Seti (3'lü)", price: 500, img: 'images/umraniye-kuru-temizleme-takim-elbise-seti.webp' },
+    { id: 't1', name: "Takım Elbise Seti (3'lü)", price: 700, img: 'images/umraniye-kuru-temizleme-takim-elbise-seti.webp' },
     { id: 't2', name: 'Takım Elbise Pantolon', price: 200, img: 'images/umraniye-kuru-temizleme-takim-elbise-pantolon.webp' },
     { id: 't3', name: 'Takım Elbise Ceket', price: 300, img: 'images/umraniye-kuru-temizleme-takim-elbise-ceket.webp' },
     { id: 't4', name: 'Takım Elbise Gömlek', price: 200, img: 'images/umraniye-kuru-temizleme-takim-elbise-gomlek.webp' },
@@ -52,8 +52,8 @@ const productsData = {
     { id: 'e1', name: 'Battaniye (Tek Kişilik)', price: 500, img: 'images/umraniye-kuru-temizleme-yorgan-yikama.webp' },
     { id: 'e2', name: 'Battaniye (Çift Kişilik)', price: 600, img: 'images/umraniye-kuru-temizleme-yorgan-yikama.webp' },
     { id: 'e3', name: 'Havlu', price: 100, img: 'images/umraniye-kuru-temizleme-havlu.webp' },
-    { id: 'e13', name: 'Yorgan(elyaf)', price: 500, img: 'images/umraniye-kuru-temizleme-yorgan-yikama.webp' },
-    { id: 'e14', name: 'Yorgan(yün)', price: 700, img: 'images/umraniye-kuru-temizleme-yorgan-yikama.webp' },
+    { id: 'e13', name: 'Yorgan(elyaf)', price: 600, img: 'images/umraniye-kuru-temizleme-yorgan-yikama.webp' },
+    { id: 'e14', name: 'Yorgan(yün)', price: 800, img: 'images/umraniye-kuru-temizleme-yorgan-yikama.webp' },
     { id: 'e5', name: 'Çarşaf (Tek Kişilik)', price: 250, img: 'images/umraniye-kuru-temizleme-carsaf-yikama.webp' },
     { id: 'e6', name: 'Çarşaf (Çift Kişilik)', price: 300, img: 'images/umraniye-kuru-temizleme-carsaf-yikama.webp' },
     { id: 'e8', name: 'Masa Örtüsü (m²)', price: 150, img: 'images/umraniye-kuru-temizleme-masa-ortusu.webp' },
@@ -64,7 +64,7 @@ const productsData = {
   ],
 
   halı: [
-    { id: 'h1', name: 'Makine Halısı (m²)', price: 170, img: 'images/umraniye-kuru-temizleme-makine-hali-yikama.webp' },
+    { id: 'h1', name: 'Makine Halısı (m²)', price: 200, img: 'images/umraniye-kuru-temizleme-makine-hali-yikama.webp' },
     { id: 'h3', name: 'Yün Halı (m²)', price: 350, img: 'images/umraniye-kuru-temizleme-dokuma-hali-yikama.webp' },
     { id: 'h4', name: 'İpek Halı (m²)', price: 400, img: 'images/umraniye-kuru-temizleme-ipek-hali-yikama.webp' }
   ],
@@ -374,43 +374,43 @@ document.addEventListener("DOMContentLoaded", () => {
     
     setTimeout(() => {
         kirliTisort.classList.add("active");
-    }, 50);
+    }, 75);
 
     
     setTimeout(() => {
         buyutec.classList.add("active");
-    }, 200);
+    }, 300);
 
     
     setTimeout(() => {
         buyutec.classList.remove("active");
         ilac.classList.add("active");
-    }, 450);
+    }, 675);
 
     
     setTimeout(() => {
         ilac.classList.remove("active");
         makine.classList.add("active");
-    }, 750);
+    }, 1125);
 
     
     setTimeout(() => {
         makine.classList.remove("active");
         kirliTisort.classList.remove("active");
         temizTisort.classList.add("active");
-    }, 1100);
+    }, 1650);
 
     
     setTimeout(() => {
         utu.classList.add("active");
-    }, 1400);
+    }, 2100);
 
     
     setTimeout(() => {
         utu.classList.remove("active");
         temizTisort.classList.remove("active");
         paket.classList.add("active");
-    }, 1700);
+    }, 2550);
 
     
     setTimeout(() => {
@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.body.classList.add("dd-loaded");
 
-    }, 2000);
+    }, 3000);
 
 });
 
